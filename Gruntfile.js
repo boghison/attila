@@ -1,3 +1,5 @@
+const sass = require('node-sass');
+
 module.exports = function(grunt) {
   'use strict';
   require('load-grunt-tasks')(grunt, {
@@ -45,7 +47,7 @@ module.exports = function(grunt) {
       dev: {
         options: {
           includePaths: ['<%= config.cssSrcDir %>'],
-          sourceMaps: true
+          sourceMaps: true,
         },
         files: {
           '<%= config.cssTargetDir %>/style.css': '<%= config.cssSrcDir %>/style.scss'
@@ -53,7 +55,8 @@ module.exports = function(grunt) {
       },
       dist: {
         options: {
-          outputStyle: 'compressed'
+          outputStyle: 'compressed',
+          implementation: sass
         },
         files: {
           '<%= config.cssTargetDir %>/style.css': '<%= config.cssSrcDir %>/style.scss'
