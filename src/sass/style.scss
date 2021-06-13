@@ -1389,6 +1389,10 @@ textarea {
 		text-decoration: none;
 		font-weight: 400;
 		cursor: pointer;
+
+		@media screen and (max-width: $breakpoint-small) {
+			font-size: 1.8em;
+		}
 	}
 
 	&:last-child {
@@ -1781,7 +1785,7 @@ textarea {
    Post Info
    ========================================================================== */
 .post-footer {
-	margin: 12rem 0 6rem;
+	margin: 8rem 0 6rem;
 
 	&:after {
 		clear: both;
@@ -1863,6 +1867,14 @@ textarea {
 	background-color: #2997EE;
 }
 
+.post-share .pocket {
+	background-color: #ef4056;
+}
+
+.post-share .telegram {
+	background-color: #08c;
+}
+
 .post-tags {
 	position: relative;
 	max-width: 66.66666%;
@@ -1898,6 +1910,18 @@ textarea {
 		opacity: 0.92;
 	}
 }
+
+.newsletter {
+	color: var(--ghost-accent-color);
+	font-size: 2em;
+	display: block;
+	margin-bottom: 2rem;
+
+	@media screen and (max-width: $breakpoint-small) {
+		font-size: 2.5em;
+	}
+}
+
 /* ==========================================================================
    Post Comments
    ========================================================================== */
